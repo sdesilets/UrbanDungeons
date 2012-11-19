@@ -37,23 +37,29 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Griddy\Scripts\GridCamera.cs" />
-     <Compile Include="Assets\Griddy\Scripts\GridController.cs" />
+     <Compile Include="Assets\Griddy\Scripts\GridController2.cs" />
      <Compile Include="Assets\Griddy\Scripts\GridDirector.cs" />
      <Compile Include="Assets\Griddy\Scripts\GridGenerator.cs" />
      <Compile Include="Assets\Griddy\Scripts\GridModel.cs" />
      <Compile Include="Assets\Griddy\Scripts\GridTrigger.cs" />
      <Compile Include="Assets\Griddy\Scripts\GridView.cs" />
      <Compile Include="Assets\Griddy\Scripts\MonoSingleton.cs" />
+     <Compile Include="Assets\Scripts\AbstractWeapon.cs" />
+     <Compile Include="Assets\Scripts\CharacterBase.cs" />
+     <Compile Include="Assets\Scripts\Fists.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GridView2.cs" />
+     <Compile Include="Assets\Scripts\Range.cs" />
+     <Compile Include="Assets\Scripts\Stat.cs" />
+     <Compile Include="Assets\Scripts\StatTypes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

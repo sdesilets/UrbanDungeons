@@ -5,13 +5,13 @@ using System.Collections;
  * GridController
  * TODO
  */
-public class GridController : MonoBehaviour
+public class GridController2 : MonoBehaviour
 {
  
     /**
      * TODO
      */
-    public GridView2 view;
+    public GridView view;
     
     /**
      * TODO

@@ -22,32 +22,33 @@ public enum TriggerEvent
  */ 
 public class GridTrigger : MonoBehaviour
 {
-    public GridController controller;
+    public GridController2 controller2;
+	public int test;
  
     void Awake ()
     {
-        if (!controller) {
+        if (!controller2) {
             Debug.LogError ("Controller not defined.");
         }
     }
  
     public void StartHover ()
     {
-        controller.Trigger (TriggerEvent.StartHover);
+        controller2.Trigger (TriggerEvent.StartHover);
     }
  
     public void StopHover ()
     {
-        controller.Trigger (TriggerEvent.StopHover);
+        controller2.Trigger (TriggerEvent.StopHover);
     }
 
     public void OnRightClick ()
     {
-        controller.Trigger (TriggerEvent.OnRightClick);
+        controller2.Trigger (TriggerEvent.OnRightClick);
     }
 
     public void OnLeftClick ()
     {
-        controller.Trigger (TriggerEvent.OnLeftClick);
+        controller2.Trigger (TriggerEvent.OnLeftClick);
     }
 }
