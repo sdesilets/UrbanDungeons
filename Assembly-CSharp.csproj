@@ -54,10 +54,13 @@
      <Compile Include="Assets\Griddy\Scripts\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\AbstractWeapon.cs" />
      <Compile Include="Assets\Scripts\CharacterBase.cs" />
+     <Compile Include="Assets\Scripts\DetectClicksAndTouches.cs" />
      <Compile Include="Assets\Scripts\Fists.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GridView2.cs" />
+     <Compile Include="Assets\Scripts\PathThroughObjects.cs" />
      <Compile Include="Assets\Scripts\Range.cs" />
+     <Compile Include="Assets\Scripts\Selectable.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\StatTypes.cs" />
   </ItemGroup>

@@ -16,7 +16,6 @@ namespace Assets
 
         private Range m_ThrustDamage, m_SwingDamage;
         
-
         public Stat Strength {
             get { return m_Strength; }
             set {
@@ -113,7 +112,10 @@ namespace Assets
         }
 
         public void Attack() {
-
+			
+/*			if (m_Target != null && m_Target)
+			{
+			}*/
 
         }
 

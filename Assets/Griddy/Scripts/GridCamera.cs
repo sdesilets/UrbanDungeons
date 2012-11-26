@@ -20,7 +20,7 @@ public class GridCamera : MonoSingleton<GridCamera>
     /**
      * Last trigger raycast hit
      */
-    GridTrigger trigger = null;
+    Selectable trigger = null;
 
     /**
      * Enable Raycasting
@@ -71,8 +71,10 @@ public class GridCamera : MonoSingleton<GridCamera>
         // Did Raycast hit Collider?
         if (Physics.Raycast (ray, out hit, 1000)) {
             
+			hit.collider.gameObject.SendMessage ("MouseOver", hit.point, SendMessageOptions.DontRequireReceiver);
+			
             // Find Trigger on Collider (if it's there).
-            GridTrigger newTrigger = hit.collider.gameObject.GetComponent<GridTrigger> ();
+            Selectable newTrigger = hit.collider.gameObject.GetComponent<Selectable> ();
 
             // Is the current trigger different from the last trigger?
             if (trigger != newTrigger) {
@@ -84,7 +86,8 @@ public class GridCamera : MonoSingleton<GridCamera>
 
                 // Current trigger is now our last trigger.
                 trigger = newTrigger;
-                trigger.StartHover ();
+				if (trigger != null)
+                	trigger.StartHover ();
             }
 
             // Collider did NOT have Trigger attached.
