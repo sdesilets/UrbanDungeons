@@ -4,6 +4,9 @@ using System.Collections;
 public class Selectable : MonoBehaviour {
 	
 	private Material originalMaterial;
+	private Vector3 m_Destination;
+	private Vector3 m_OriginalPosition;
+	private float speed = 3.0f;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,9 +19,14 @@ public class Selectable : MonoBehaviour {
 		if (IsSelected)
 		{
 			gameObject.renderer.material.color = Color.blue;
+			if (m_Destination != Vector3.zero && m_Destination != gameObject.transform.position)
+			{
+				gameObject.transform.position = Vector3.Lerp (gameObject.transform.position, m_Destination, Time.deltaTime * speed);
+			}
 		}
 		else
 			gameObject.renderer.material = originalMaterial;
+		
 	}
 	
 	public void StartHover ()
@@ -50,5 +58,11 @@ public class Selectable : MonoBehaviour {
 		{
 			return GameController.instance.Selected == gameObject;
 		}
+	}
+	
+	public void MoveTo(Vector3 pos)
+	{
+		//m_OriginalPosition = transform.position;
+		m_Destination = pos;
 	}
 }

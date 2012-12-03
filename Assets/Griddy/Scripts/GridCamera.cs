@@ -98,7 +98,16 @@ public class GridCamera : MonoSingleton<GridCamera>
 
             // Is Left Mouse Clicked?
             if (Input.GetMouseButtonDown (0)) {
-                trigger.OnLeftClick ();
+				
+                if (GameController.instance.Selected == null)
+				{
+					trigger.OnLeftClick ();
+				}
+				else
+				{
+					GameController.instance.Selected.GetComponent<Selectable>().MoveTo(hit.point);
+				}
+
             }
 
             // Is Right Mouse Clicked?
@@ -112,6 +121,7 @@ public class GridCamera : MonoSingleton<GridCamera>
                 trigger.StopHover ();
                 trigger = null;
             }
+			
         }
     }
 }
